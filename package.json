@@ -10,7 +10,7 @@
     "build-client": "webpack",
     "build-client-watch": "webpack -w",
     "deploy": "git pull heroku master && webpack && git add -f public/bundle.js public/bundle.js.map && git commit --allow-empty -m 'Deploying' && git push heroku deploy:master",
-    "start": "node server",
+    "start": "node server/index.js",
     "start-dev": "npm run build-client-watch & npm run start-server",
     "start-server": "NODE_ENV='development' nodemon server -e html,js,scss --ignore public",
     "test": "NODE_ENV='test' DATABASE_URL='postgres://localhost:5432/potluckier-test' mocha ./**/*.spec.js --compilers js:babel-register",
