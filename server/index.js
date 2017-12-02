@@ -12,7 +12,8 @@ const aws = require('aws-sdk');
 const Chance = require('chance');
 let chance = new Chance;
 
-const PORT = process.env.PORT || 8080
+const PORT = process.env.JAWSDB_URL || 3306;
+app.listen(port);
 const app = express()
 module.exports = app
 
